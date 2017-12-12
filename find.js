@@ -7,18 +7,23 @@ var boxWidth = box.offsetWidth;
 var targetX = boxWidth / 2;
 var targetY = boxHeight / 2;
 
+var mouseX = mousemove.clientX
+var mouseY = mousemove.clientY;
+
 
 console.log( "box height: " + boxHeight );
 console.log( "box width: " + boxWidth );
 
 //calculate distance between current mouse pos and target
 var distance = function (x0, y0, x1, y1) {
-  /* YOUR IMPLEMENTATION */
+    var retVal = Math.sqrt( ((x1-x0)**2) + ((y1-y0)**2) );
+    //    console.log(retVal);
+    return retVal;
 };
 
 
 var findIt = function(e) {
-  /* YOUR IMPLEMENTATION */
+    console.log(distance(targetX, targetY, mouseX, mouseY));
 };
 
 /*
